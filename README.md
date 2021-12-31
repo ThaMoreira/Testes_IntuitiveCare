@@ -18,7 +18,7 @@ Neste teste é necessário a criação de um código que execute:<br />
 2.2 - Salve os dados em tabelas estruturadas, em csvs;<br />
 2.3 - Zipar todos os csvs num arquivo "Teste_{seu_nome}.zip".<br />
 
-## Teste de nivelamento 2
+## Teste de nivelamento 3
 Neste teste é necessário a criação de scripts sql (MySQL 8. ou Postgres >10.0) que execute: 
 
 Tarefas de Preparação:<br />
