@@ -39,7 +39,7 @@ CREATE TABLE Registro
     Endereco_Eletronico VARCHAR(255),
     Representante VARCHAR(255),
     Cargo_Representante VARCHAR(255),
-    Data_Registro_ANS VARCHAR(255),
+    Data_Registro_ANS VARCHAR(255), #DATE
     PRIMARY KEY (Registro_ANS)
 );
 
@@ -81,6 +81,29 @@ BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs
       ROWTERMINATOR = '\n'
 );
 #fim_do_Modo_4
+
+#Modo_5
+LOAD DATA LOCAL INFILE 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/Relatorio_cadop.csv'
+INTO TABLE Registro
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 3 ROWS
+(Registro_ANS, CNPJ, Razao_Social, Nome_Fantasia, Modalidade, Logradouro, Numero, Complemento, Bairro, Cidade, UF, CEP, DDD, Telefone, Fax, Endereco_eletronico, Representante, Cargo_Representante, @Data_Registro_ANS)
+SET Data_Registro_ANS = STR_TO_DATE(@Data_Registro_ANS, '%d/%m/%Y');
+
+LOAD DATA LOCAL INFILE 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/3T2021'
+INTO TABLE Despesas
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS
+(@DATA,REG_ANS, CD_CONTA_CONTABIL, DESCRICAO, @VL_SALDO_FINAL)
+SET DATA = STR_TO_DATE(@DATA, '%d/%m/%Y'),
+VL_SALDO_FINAL = replace(@VL_SALDO_FINAL, ',', '.');
+#Fim_Modo_5
 
 #Consulta_No_Banco_de_dados
 SELECT Despesas."REG_ANS", "Registro"."Razao_Social", SUM(Despesas."VL_SALDO_FINAL") as despesa_total_3t2021
