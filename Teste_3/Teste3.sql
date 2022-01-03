@@ -1,3 +1,9 @@
+#Referências
+#https://docs.microsoft.com/pt-br/sql/t-sql/statements/bulk-insert-transact-sql?view=sql-server-ver15
+#https://docs.microsoft.com/pt-br/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-ver15#bulk-insert
+#https://docs.microsoft.com/pt-br/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-ver15
+#https://www.webmundi.com/banco-de-dados/ms-sql-server/importando-uma-planilha-excel-para-o-sql-server/
+
 CREATE DATABASE Teste3;
 
 USE Teste3
@@ -37,20 +43,46 @@ CREATE TABLE Registro
     PRIMARY KEY (Registro_ANS)
 );
 
-
+#Modo_1
 BULK INSERT Registro FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/Relatorio_cadop.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\r\n', TABLOCK)
 BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/1T2020.csv' WITH (FORMAT = 'CSV', FIRSTROW=2, FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK);
-BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/2T2020.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK)
+BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/2T2020.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', FIRSTROW = 1, CODEPAGE = 'acp')
 BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/3T2020.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK)
 BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/4T2020.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK)
 BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/1T2021.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK)
 BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/2T2021.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK)
 BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/3T2021.csv' WITH (FIELDTERMINATOR = ',',ROWTERMINATOR = '\n', TABLOCK)
+#fim_do_Modo_1
 
+#modo_2
+INSERT INTO Despesas SELECT
+* FROM OPENROWSET ('Microsoft.Jet.OleDB.4.0',
+'EXCEL 8.0;Database=C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/3T2021.csv'
+,Plan1$)
+#fim_do_Modo_2
 
+#Modo_3
+sp_configure 'show advanced options', 1;
+RECONFIGURE;
+sp_configure 'Ad Hoc Distributed Queries', 1;
+RECONFIGURE;
 
+USE ImportFromExcel;
+INSERT INTO Despesas
+SELECT * FROM OPENROWSET('Microsoft.ACE.OLEDB.12.0',
+    'Excel 12.0; Database=C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/3T2021.csv', [Sheet1$]);
+#fim_do_Modo_3
 
+#Modo_4
+USE ImportFromExcel;
+BULK INSERT Despesas FROM 'C:\Users\thamo\Desktop\Processo_Seletivo\Teste_3\Docs/3T2021.csv'
+   WITH (
+      FIELDTERMINATOR = ',',
+      ROWTERMINATOR = '\n'
+);
+#fim_do_Modo_4
 
+#Consulta_No_Banco_de_dados
 SELECT Despesas."REG_ANS", "Registro"."Razao_Social", SUM(Despesas."VL_SALDO_FINAL") as despesa_total_3t2021
 	FROM Despesas
 	JOIN Registro
