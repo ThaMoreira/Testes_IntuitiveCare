@@ -19,14 +19,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 O primeiro passo é a criação do banco de dados "Teste3" e o uso do mesmo.<br /> 
 <br />
 Após a criação do banco de dados são criadas as tabelas "Despesas" e "Registro" com suas devidas colunas.<br />
-<br />
-Quadro 31:<br />
-O tabula realiza a leitura do PDF atrás de quadros localizados nas páginas 115,116,117,118,119,120, excluindo headers pois o quadro 31 ocupa mais do que uma página armazenando na variável "quadro31" utilizando o "bigdata" para concatenar e juntar os quadros encontrados nas páginas 115 à 120 em um quadro só, além de atualizar o quadro para ser lido no sql (função futura). <br />
-<br />
-Quadro 32: <br />
-O tabula realiza a leitura do PDF atrás de quadros localizado na página 120, porém por ter mais de um quadro neste página foi utilizado o app Tabula que extrai a área exata de um quadro em um PDF, salvando na variável "quadro32". <br />
-<br />
-Zipar<br />
-Após toda a extração dos quadros é utilizado o ZipFile para zipar os quadros 30,31 e 32 em um arquivo (Teste_Thaís_Moreira_Teixeira)
+
 
 
