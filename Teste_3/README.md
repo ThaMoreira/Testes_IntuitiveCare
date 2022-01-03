@@ -9,3 +9,9 @@ Baixar csv do link [Padrão Tiss](https://www.gov.br/ans/pt-br/assuntos/prestado
 3.2 - Montar uma query analítica que traga a resposta para as seguintes perguntas:<br />
 *Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?<br />
 Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano?*
+
+## 🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
+* **[SSMS](https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)**
+
+
