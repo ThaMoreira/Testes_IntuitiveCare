@@ -1,3 +1,6 @@
+  <p align="center">
+  <img src="./logo.png" width="400px" height="250px"/></p>
+  
 
 ## 💻 Sobre
 Esta etapa do processo seletivo consiste na realização de testes de nivelamento. Estes testes foram desenhados em função de tarefas realizadas no dia a dia da empresa e têm como objetivo avaliar:
