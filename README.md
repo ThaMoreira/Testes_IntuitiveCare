@@ -1,9 +1,6 @@
- <div align="center">
-<width="10%">
-<img src="./logo.png" >
-</div>
-  
-
+ 
+ <p align="center">
+  <img src="./logo.png" width="400px" height="250px"/></p>
   
 
 ## 💻 Sobre
