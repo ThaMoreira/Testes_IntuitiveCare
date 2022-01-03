@@ -1,5 +1,9 @@
-  <p align="center">
-  <img src="./logo.png" width="400px" height="250px"/></p>
+ <div align="center">
+<width="10%">
+<img src="./logo.png" >
+</div>
+  
+
   
 
 ## 💻 Sobre
