@@ -13,12 +13,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=javascript-9652-gllemos)**
 
 
-## Teste de nivelamento 1
-Neste teste é necessário a criação de um código que execute:<br />
-1.1 - Acessar o site [Gov.br](https://www.gov.br/ans/pt-br/assuntos/prestadores/padrao-para-troca-de-informacao-de-saude-suplementar-2013-tiss);<br />
-1.2 - Buscar a versão mais recente do Padrão TISS;<br />
-1.3 - Baixar o componente organizacional;<br />
-
 ## Teste de nivelamento 2
 Neste teste é necessário a criação de um código que execute:<br />
 2.1 - Extraia do pdf do teste 1 os dados dos Quadros 30,31,32 (Tabela de categoria do Padrão TISS);<br />
