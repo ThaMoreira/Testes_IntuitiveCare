@@ -1,10 +1,17 @@
 
-# Testes de Nivelamento Intuitive Care
+## 💻 Sobre
 Esta etapa do processo seletivo consiste na realização de testes de nivelamento. Estes testes foram desenhados em função de tarefas realizadas no dia a dia da empresa e têm como objetivo avaliar:
 
 ·      Conhecimentos básicos de programação
 
 ·      Organização do código
+
+## 🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
+* **[Phyton](https://www.python.org/)**
+* **[SSMS](https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)**
+* **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=javascript-9652-gllemos)**
+
 
 ## Teste de nivelamento 1
 Neste teste é necessário a criação de um código que execute:<br />
@@ -29,3 +36,8 @@ Baixar csv do link: https://www.gov.br/ans/pt-br/assuntos/prestadores/padrao-par
 3.2 - Montar uma query analítica que traga a resposta para as seguintes perguntas:<br />
 *Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?<br />
 Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último ano?*
+
+
+## 📝 Ass
+
+Feito com ❤️ por Thaís Moreira Teixeira 🖖 [Entre em contato!](https://www.linkedin.com/in/tha-moreira/)
