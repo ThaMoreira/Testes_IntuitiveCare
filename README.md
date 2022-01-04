@@ -14,12 +14,12 @@ Esta etapa do processo seletivo consiste na realização de testes de nivelament
 <details>
 <summary>Teste 1 - WebScraping</summary>
 <br>
-Neste teste o candidato deverá criar um código (em uma das linguagens mencionadas no fim desse email) que execute as tarefas de código abaixo.
+Neste teste o candidato deverá criar um código que execute as tarefas:
 Tarefas de código:
 <br><br>
 <pre>
 1 - Acessar o site: http://www.ans.gov.br/prestadores/tiss-troca-de-informacao-de-saude-suplementar;
-2 - Buscar a versão mais recente do Padrão TISS (arquivo - padrao_tiss_componente_organizacional_201902.pdf);
+2 - Buscar a versão mais recente do Padrão TISS (arquivo - padrao_tiss_componente_organizacional_202111.pdf);
 3 - Baixar o componente organizacional;
 </pre>
 <a href="https://github.com/ThaMoreira/Testes_IntuitiveCare/tree/main/Teste_1">Abrir Teste 01</a>
@@ -28,13 +28,13 @@ Tarefas de código:
 <details>
 <summary>Teste 2 - Transformação de dados</summary>
 <br>
-Neste teste o candidato deverá criar um código (em uma das linguagens mencionadas no fim desse email) que execute as tarefas de código abaixo.
+Neste teste o candidato deverá criar um código que execute as tarefas:
 Tarefas de código:
 <br><br>
 <pre>
 1 - Extrair do pdf do teste 1 acima os dados dos Quadros 30,31,32 (Tabela de categoria do Padrão TISS);
 2 - Salvar dados em tabelas estruturadas, em csvs;
-3 - Zipar todos os csvs num arquivo "Teste_Intuitive_Care_{seu_nome}.zip".
+3 - Zipar todos os csvs num arquivo "Teste_Thaís_Moreira_Teixeira.zip".
 </pre>
 <a href="https://github.com/ThaMoreira/Testes_IntuitiveCare/tree/main/Teste_2">Abrir Teste 02</a>
 </details>
@@ -42,7 +42,7 @@ Tarefas de código:
 <details>
 <summary>Teste 3 - Banco de dados</summary>
 <br>
-Neste teste o candidato deverá criar scripts sql (MySQL 8.* ou Postgres >10.0) que execute as tarefas de código abaixo.
+Neste teste o candidato deverá criar scripts sql (MySQL 8.* ou Postgres >10.0) que execute as tarefas:
 <br><br>
 Tarefas de Preparação:
 <br><br>
