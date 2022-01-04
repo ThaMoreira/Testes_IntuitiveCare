@@ -12,7 +12,7 @@ Quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS CONHECI
 
 ## 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
-* **[SSMS](https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)**
+* **[PostgreSQL](https://www.postgresql.org/)**
 
 
 ## ⚙️ Funcionamento
