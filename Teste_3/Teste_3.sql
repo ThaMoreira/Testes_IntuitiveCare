@@ -30,7 +30,7 @@ CREATE TABLE registros (
     PRIMARY KEY (Registro_ANS)
 );
 
-/* Copia dos dados do CSV do relatorio para a tabela "Registros"
+/* Copia os dados do CSV do relatorio cadop para a tabela "Registros"
    Porém existe um problema na importação destes dados - informa que possui dados depois da ultima coluna*/
 
 copy registros(Registro_ANS, CNPJ, Razao_Social, Nome_Fantasia, Modalidade, Logradouro, Numero, Complemento, Bairro, Cidade, UF, CEP, DDD, Telefone, Fax, Endereco_Eletronico, Representante, Cargo_Representante, Data_Registro_ANS)
