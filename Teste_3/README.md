@@ -18,7 +18,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## ⚙️ Funcionamento
 O primeiro passo é a criação do banco de dados "Teste3" e o uso do mesmo.<br /> 
 <br />
-Após a criação do banco de dados são criadas as tabelas "Despesas" e "Registro" com suas devidas colunas.<br />
+Após a criação do banco de dados são criadas as tabelas "dados" e "registros" com suas devidas colunas.<br />
+<br />
+Após a criação das tabelas, as mesmas são preenchidas com os dados dos arquivos .CSV.<br />
+<br />
+Após todo esse processo é realizado a busca para saber quais as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS..." no último trimestre e quais as as 10 operadoras que mais tiveram despesas com "EVENTOS/ SINISTROS..." no último ano. 
 
 
 
